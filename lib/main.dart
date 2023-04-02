@@ -51,11 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
     if (response.statusCode >= 200 && response.statusCode < 300) {
       print(response.body);
 
-      //List result = json.decode(response.body);
+      List result = json.decode(response.body);
 
-      //for (var item in result) {
-      // print(item['title']);
-      //}
+      for (var item in result) {
+        print(item['title']);
+      }
     } else {
       print('aconteceu um erro:${response.statusCode}');
     }
